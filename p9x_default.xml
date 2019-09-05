@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- Github remote -->
+  <remote  name="github"
+           fetch="https://github.com/" />
+
+  <!-- DU GitHub -->
+  <remote  name="du"
+           revision="q10x"
+           fetch="https://github.com/nychitman1" />
+
+  <!-- GitLab remote -->
+  <remote name="gitlab"
+          fetch="https://gitlab.com/" />
+
+  <!-- Local -->
+  <remote  name="local"
+           revision="q10x"
+           fetch="/home/nexus/DU_Repos" />
+
+  <!-- Build -->
+  <project path="build/make" name="android_build" remote="du" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/soong" name="android_build_soong" remote="du" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+
+  <!-- Manifest -->
+  <project path="manifest" name="android_manifest" remote="local" />
+
+  <project path="vendor/du" name="android_vendor_du" remote="du" />
+  <project path="vendor/extras" name="android_vendor_extras" remote="du" />
+
+</manifest>
