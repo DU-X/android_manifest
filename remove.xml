@@ -56,6 +56,7 @@
   <remove-project name="device/ti/beagle-x15-kernel" />
 
   <!-- Packages -->
+  <remove-project name="platform/packages/apps/Bluetooth" />
   <remove-project name="platform/packages/apps/Browser2" />
   <remove-project name="platform/packages/apps/Calendar" />
   <remove-project name="platform/packages/apps/Camera2" />
@@ -73,6 +74,7 @@
   <remove-project name="platform/packages/apps/Music" />
   <remove-project name="platform/packages/apps/Protips" />
   <remove-project name="platform/packages/apps/QuickSearchBox" />
+  <remove-project name="platform/packages/apps/Settings" />
   <remove-project name="platform/packages/apps/SoundRecorder" />
   <remove-project name="platform/packages/apps/SpareParts" />
   <remove-project name="platform/packages/apps/Test/connectivity" />
