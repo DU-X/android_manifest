@@ -8,16 +8,11 @@
   <!-- DU GitHub -->
   <remote  name="du"
            revision="q10x"
-           fetch="https://github.com/nychitman1" />
+           fetch="https://github.com/ZVNexus" />
 
   <!-- GitLab remote -->
   <remote name="gitlab"
           fetch="https://gitlab.com/" />
-
-  <!-- Local -->
-  <remote  name="local"
-           revision="q10x"
-           fetch="/home/nexus/DU_Repos" />
 
   <!-- Build -->
   <project path="build/make" name="android_build" remote="du" >
@@ -35,7 +30,7 @@
   </project>
 
   <!-- Manifest -->
-  <project path="manifest" name="android_manifest" remote="local" />
+  <project path="manifest" name="android_manifest" remote="du" />
 
   <project path="vendor/du" name="android_vendor_du" remote="du" />
   <project path="vendor/extras" name="android_vendor_extras" remote="du" />
