@@ -80,4 +80,9 @@
   <project path="vendor/du" name="android_vendor_du" remote="du-x" />
   <project path="vendor/extras" name="android_vendor_extras" remote="du-x" />
 
+  <!-- Lineage REPOS -->
+  <!-- Prebuilts -->
+  <project path="prebuilts/openssl" name="LineageOS/android_prebuilts_openssl" remote="github" revision="lineage-17.0" />
+  <project path="prebuilts/tools-lineage" name="LineageOS/android_prebuilts_tools-lineage" remote="github" revision="lineage-17.0" />
+
 </manifest>
