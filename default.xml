@@ -772,6 +772,6 @@
   <include name="remove.xml" />
 
   <!-- Add all tracked DU/AOSP repos -->
-  <include name="p9x_default.xml" />
+  <include name="q10x_default.xml" />
 
 </manifest>
