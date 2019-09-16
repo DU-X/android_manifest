@@ -55,6 +55,10 @@
   <remove-project name="device/ti/beagle-x15" />
   <remove-project name="device/ti/beagle-x15-kernel" />
 
+  <!-- Hardware -->
+  <remove-project name="platform/hardware/qcom/camera" />
+  <remove-project name="platform/hardware/qcom/gps" />
+
   <!-- Packages -->
   <remove-project name="platform/packages/apps/Bluetooth" />
   <remove-project name="platform/packages/apps/Browser2" />

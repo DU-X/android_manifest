@@ -29,6 +29,10 @@
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
 
+  <!-- Hardware -->
+  <project path="hardware/qcom/camera" name="android_hardware_qcom_camera" remote="du-x" />
+  <project path="hardware/qcom/gps" name="android_hardware_qcom_gps" remote="du-x" />
+
   <!-- Manifest -->
   <project path="manifest" name="android_manifest" remote="du-x" revision="q10x-caf" />
 
