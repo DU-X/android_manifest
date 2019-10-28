@@ -14,25 +14,14 @@
            revision="q10x"
            fetch="https://github.com/DirtyUnicorns/" />
 
-  <!-- DU REPOS -->
+  <!-- DU-X remote -->
+  <remote  name="du-x"
+           revision="q10x"
+           fetch="https://github.com/DU-X/" />
 
+  <!-- DU REPOS -->
   <!-- General -->
-  <project path="bionic" name="android_bionic" remote="du" />
   <project path="bootable/recovery" name="android_bootable_recovery" remote="du" />
-  <project path="build/make" name="android_build" remote="du" >
-    <copyfile src="core/root.mk" dest="Makefile" />
-    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
-    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
-    <linkfile src="core" dest="build/core" />
-    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
-    <linkfile src="target" dest="build/target" />
-    <linkfile src="tools" dest="build/tools" />
-  </project>
-  <project path="build/soong" name="android_build_soong" remote="du" >
-    <linkfile src="root.bp" dest="Android.bp" />
-    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
-  </project>
-  <project path="manifest" name="android_manifest" remote="du" />
   <project path="platform_testing" name="android_platform_testing" remote="du" />
 
   <!-- External -->
@@ -48,15 +37,6 @@
   <project path="hardware/libhardware" name="android_hardware_libhardware" remote="du" />
   <project path="hardware/libhardware_legacy" name="android_hardware_libhardware_legacy" remote="du" />
   <project path="hardware/ril" name="android_hardware_ril" remote="du" />
-  <project path="hardware/qcom-caf/common" name="android_hardware_qcom-caf_common" remote="du" >
-    <linkfile src="os_pickup_aosp.mk" dest="hardware/qcom/Android.mk" />
-    <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8996/Android.bp" />
-    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8996/Android.mk" />
-  </project>
-  <project path="hardware/qcom-caf/msm8996/audio" name="android_hardware_qcom_audio" remote="du" revision="q10x-caf-8996" />
-  <project path="hardware/qcom-caf/msm8996/display" name="android_hardware_qcom_display" remote="du" revision="q10x-caf-8996" />
-  <project path="hardware/qcom-caf/msm8996/media" name="android_hardware_qcom_media" remote="du" revision="q10x-caf-8996" />
-  <project path="hardware/qcom-caf/wlan" name="android_hardware_qcom_wlan" remote="du" revision="q10x-caf" />
 
   <!-- Packages -->
   <project path="packages/apps/Bluetooth" name="android_packages_apps_Bluetooth" remote="du" />
@@ -76,10 +56,28 @@
   <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9" remote="du" />
 
   <!-- Vendor -->
-  <project path="vendor/du" name="android_vendor_du" remote="du" >
-    <linkfile src="scripts/merge-aosp.sh" dest="merge-aosp.sh" />
-  </project>
-  <project path="vendor/extras" name="android_vendor_extras" remote="du" />
   <project path="vendor/themes" name="android_vendor_themes" remote="du" />
+
+  <!-- DU-X REPOS -->
+  <!-- General -->
+  <project path="bionic" name="android_bionic" remote="du-x" />
+  <project path="build/make" name="android_build" remote="du-x" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/soong" name="android_build_soong" remote="du-x" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+  <project path="manifest" name="android_manifest" remote="du-x" />
+
+  <!-- Vendor -->
+  <project path="vendor/du" name="android_vendor_du" remote="du-x" />
+  <project path="vendor/extras" name="android_vendor_extras" remote="du-x" />
 
 </manifest>
