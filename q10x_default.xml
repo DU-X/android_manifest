@@ -21,7 +21,21 @@
 
   <!-- DU REPOS -->
   <!-- General -->
+  <project path="bionic" name="android_bionic" remote="du" />
   <project path="bootable/recovery" name="android_bootable_recovery" remote="du" />
+  <project path="build/make" name="android_build" remote="du" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/soong" name="android_build_soong" remote="du" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
   <project path="platform_testing" name="android_platform_testing" remote="du" />
 
   <!-- External -->
@@ -56,32 +70,12 @@
   <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9" remote="du" />
 
   <!-- Vendor -->
+  <project path="vendor/du" name="android_vendor_du" remote="du" />
+  <project path="vendor/extras" name="android_vendor_extras" remote="du" />
   <project path="vendor/themes" name="android_vendor_themes" remote="du" />
 
   <!-- DU-X REPOS -->
   <!-- General -->
-  <project path="bionic" name="android_bionic" remote="du-x" />
-  <project path="build/make" name="android_build" remote="du-x" >
-    <copyfile src="core/root.mk" dest="Makefile" />
-    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
-    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
-    <linkfile src="core" dest="build/core" />
-    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
-    <linkfile src="target" dest="build/target" />
-    <linkfile src="tools" dest="build/tools" />
-  </project>
-  <project path="build/soong" name="android_build_soong" remote="du-x" >
-    <linkfile src="root.bp" dest="Android.bp" />
-    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
-  </project>
   <project path="manifest" name="android_manifest" remote="du-x" />
-
-  <!-- Vendor -->
-  <project path="vendor/du" name="android_vendor_du" remote="du-x" />
-  <project path="vendor/extras" name="android_vendor_extras" remote="du-x" />
-
-  <!-- Lineage REPOS -->
-  <!-- Prebuilts -->
-  <project path="prebuilts/tools-lineage" name="LineageOS/android_prebuilts_tools-lineage" remote="github" revision="lineage-17.0" />
 
 </manifest>
